@@ -1,26 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <h1>Resume</h1>
+    <UserProfile />
+    <ResumeEducation />
+    <ResumeSkills />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import UserProfile from './components/UserProfile.vue';
+import ResumeEducation from './components/ResumeEducation.vue';
+import ResumeSkills from './components/ResumeSkills.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    UserProfile,
+    ResumeEducation,
+    ResumeSkills
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+body {
+    font-family: Arial, sans-serif;
+  }
+  #app {
+    max-width: 800px;
+    margin: auto;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3em;
+  }
 </style>
